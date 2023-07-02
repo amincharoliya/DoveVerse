@@ -1,4 +1,5 @@
-import { signIn, signOut, useSession } from 'next-auth/react';
+import SidebarLeft from '@/components/sidebarLeft';
+import { signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
 export default function Home() {
@@ -15,9 +16,13 @@ export default function Home() {
 	}
 
 	return (
-		<main className="flex flex-col font-inter font-medium text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-900 min-h-screen">
-			Homepage <br />
-			<button onClick={() => signOut()}>Sign out</button>
-		</main>
+		<div className="bg-black flex justify-center w-full">
+			<div className="w-full flex flex-row font-inter font-medium text-white min-h-screen max-w-7xl">
+				<SidebarLeft />
+				<main className="flex-1 flex-grow ml-[68px] xs:ml-[88px] xl:ml-[275px]">
+					<button onClick={() => signOut()}>Sign out</button>
+				</main>
+			</div>
+		</div>
 	);
 }

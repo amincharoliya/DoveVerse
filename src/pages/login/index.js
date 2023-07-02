@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
 import LoginModal from '@/components/modals/LoginModal';
-import Twitter from '@/icons/Dove';
+import Dove from '@/icons/Dove';
 
 export default function LoginScreen() {
 	const { status, data: session } = useSession();
@@ -26,12 +26,12 @@ export default function LoginScreen() {
 						fill={true}
 						alt="welcome-image"
 					/>
-					<Twitter className="h-full w-[80%] fill-[#1d9bf0] p-2 lg:p-14 relative" />
+					<Dove className="h-full w-[80%] fill-[#1d9bf0] p-2 lg:p-14 relative" />
 				</div>
 				<div className="flex grow items-center justify-center p-5 lg:pt-5 pt-0 lg:p-1 bg-black text-white">
 					<div className="flex w-full items-center justify-start p-12">
 						<div className="flex flex-col gap-5">
-							<Twitter className="w-10 fill-white" />
+							<Dove className="w-10 fill-white" />
 							<h1 className="mb-12 text-5xl font-extrabold">
 								{"See What's happening now"}
 							</h1>
