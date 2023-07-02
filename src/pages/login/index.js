@@ -33,7 +33,7 @@ export default function LoginScreen() {
 						<div className="flex flex-col gap-5">
 							<Dove className="w-10 fill-white" />
 							<h1 className="mb-12 text-5xl font-extrabold">
-								{"See What's happening now"}
+								{"See what's happening"}
 							</h1>
 							<p className="text-3xl font-bold">
 								Join DoveVerse today.
