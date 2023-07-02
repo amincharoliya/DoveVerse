@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 // Icons
 import CloseIcon from '@/icons/CloseIcon';
 import GitHub from '@/icons/GitHub';
-import Twitter from '@/icons/Twitter';
+import Twitter from '@/icons/Dove';
 
 export default function LoginModal({ onClose }) {
 	const [fading, setFading] = useState(true);

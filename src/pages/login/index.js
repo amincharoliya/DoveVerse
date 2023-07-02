@@ -1,5 +1,5 @@
 import LoginModal from '../../components/LoginModal';
-import Twitter from '@/icons/Twitter';
+import Twitter from '@/icons/Dove';
 import Image from 'next/image';
 import { useState } from 'react';
 
