@@ -1,10 +1,22 @@
-import LoginModal from '../../components/LoginModal';
-import Twitter from '@/icons/Dove';
-import Image from 'next/image';
 import { useState } from 'react';
+import Image from 'next/image';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
+
+import LoginModal from '@/components/LoginModal';
+import Twitter from '@/icons/Dove';
 
 export default function LoginScreen() {
+	const { status, data: session } = useSession();
+	const router = useRouter();
+
 	const [showModal, setShowModal] = useState(false);
+
+	if (status === 'authenticated') {
+		router.push('/');
+		return;
+	}
+
 	return (
 		<>
 			<div className="flex h-[100vh] flex-col lg:flex-row lg:justify-between">

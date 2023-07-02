@@ -1,4 +1,4 @@
-import { useSession } from 'next-auth/react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
 export default function Home() {
@@ -16,7 +16,8 @@ export default function Home() {
 
 	return (
 		<main className="flex flex-col font-inter font-medium text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-900 min-h-screen">
-			Homepage
+			Homepage <br />
+			<button onClick={() => signOut()}>Sign out</button>
 		</main>
 	);
 }

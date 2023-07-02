@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { signIn } from 'next-auth/react';
+
 // Icons
 import CloseIcon from '@/icons/CloseIcon';
 import GitHub from '@/icons/GitHub';
