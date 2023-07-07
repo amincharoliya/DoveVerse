@@ -33,6 +33,13 @@ export default function LoginModal({ onClose }) {
 				}`}
 			>
 				<div className="w-3/4 mx-auto mb-10">
+					<button
+						className="absolute left-5 top-5"
+						onClick={() => hideModal()}
+						aria-label="close"
+					>
+						<CloseIcon />
+					</button>
 					<Twitter className="w-10 fill-white mx-auto mb-6" />
 					<h2 className="text-3xl font-bold text-white mb-8">
 						Sign in to DoveVerse
@@ -43,12 +50,6 @@ export default function LoginModal({ onClose }) {
 					>
 						<GitHub className="w-7" />
 						Sign in with GitHub
-					</button>
-					<button
-						className="absolute left-5 top-5"
-						onClick={() => hideModal()}
-					>
-						<CloseIcon />
 					</button>
 				</div>
 			</div>

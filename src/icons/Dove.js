@@ -1,4 +1,4 @@
-export default function Twitter({ className = '' }) {
+export default function Dove({ className = '' }) {
 	return (
 		<svg
 			aria-hidden="true"
