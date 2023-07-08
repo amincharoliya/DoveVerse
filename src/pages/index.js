@@ -1,6 +1,9 @@
-import SidebarLeft from '@/components/sidebarLeft';
-import { signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
+
+import SidebarLeft from '@/components/sidebarLeft';
+import Feed from '@/components/feed';
+import SidebarRight from '@/components/sidebarRight';
 
 export default function Home() {
 	const { status, data: session } = useSession();
@@ -19,8 +22,9 @@ export default function Home() {
 		<div className="flex w-full justify-center bg-black">
 			<div className="font-inter flex min-h-screen w-full max-w-7xl flex-row font-medium text-white">
 				<SidebarLeft />
-				<main className="xs:ml-[88px] ml-[68px] flex-1 flex-grow xl:ml-[275px]">
-					<button onClick={() => signOut()}>Sign out</button>
+				<main className="flex flex-1 flex-grow ml-[68px] xs:ml-[88px] xl:ml-[275px]">
+					<Feed />
+					<SidebarRight />
 				</main>
 			</div>
 		</div>
