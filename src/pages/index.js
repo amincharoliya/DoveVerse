@@ -16,10 +16,10 @@ export default function Home() {
 	}
 
 	return (
-		<div className="bg-black flex justify-center w-full">
-			<div className="w-full flex flex-row font-inter font-medium text-white min-h-screen max-w-7xl">
+		<div className="flex w-full justify-center bg-black">
+			<div className="font-inter flex min-h-screen w-full max-w-7xl flex-row font-medium text-white">
 				<SidebarLeft />
-				<main className="flex-1 flex-grow ml-[68px] xs:ml-[88px] xl:ml-[275px]">
+				<main className="xs:ml-[88px] ml-[68px] flex-1 flex-grow xl:ml-[275px]">
 					<button onClick={() => signOut()}>Sign out</button>
 				</main>
 			</div>

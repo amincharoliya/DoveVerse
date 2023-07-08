@@ -6,8 +6,8 @@ export default function UserBlock() {
 	const { data: session } = useSession();
 	const { name, image } = session.user;
 	return (
-		<div className="mt-auto flex justify-start w-full items-center pt-5">
-			<div className="rounded-full overflow-hidden mr-5">
+		<div className="mt-auto flex w-full items-center justify-start pt-5">
+			<div className="mr-5 overflow-hidden rounded-full">
 				<Image src={image} height={60} width={60} alt={name} />
 			</div>
 			<div>
