@@ -4,13 +4,14 @@ import { useRouter } from 'next/router';
 import SidebarLeft from '@/components/sidebarLeft';
 import Feed from '@/components/feed';
 import SidebarRight from '@/components/sidebarRight';
+import Loader from '@/components/Loader';
 
 export default function Home() {
 	const { status, data: session } = useSession();
 	const router = useRouter();
 
 	if (status === 'loading') {
-		return <p>Loading...</p>;
+		return <Loader />;
 	}
 
 	if (status === 'unauthenticated') {
