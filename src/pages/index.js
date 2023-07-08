@@ -20,7 +20,7 @@ export default function Home() {
 
 	return (
 		<div className="flex w-full justify-center bg-black">
-			<div className="font-inter flex min-h-screen w-full max-w-7xl flex-row font-medium text-white">
+			<div className="font-inter flex min-h-screen w-full max-w-7xl flex-row text-white">
 				<SidebarLeft />
 				<main className="flex flex-1 flex-grow ml-[68px] xs:ml-[88px] xl:ml-[275px]">
 					<Feed />
