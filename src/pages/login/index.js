@@ -20,15 +20,15 @@ export default function LoginScreen() {
 	return (
 		<>
 			<div className="flex h-[100vh] flex-col lg:flex-row lg:justify-between">
-				<div className="flex h-full w-full items-center justify-center bg-[#15406A] lg:w-[50%] relative ">
+				<div className="relative flex h-full w-full items-center justify-center bg-[#15406A] lg:w-[50%] ">
 					<Image
 						src="/images/welcome-bg.jpg"
 						fill={true}
 						alt="welcome-image"
 					/>
-					<Dove className="h-full w-[80%] fill-[#1d9bf0] p-2 lg:p-14 relative" />
+					<Dove className="relative h-full w-[80%] fill-[#1d9bf0] p-2 lg:p-14" />
 				</div>
-				<div className="flex grow items-center justify-center p-5 lg:pt-5 pt-0 lg:p-1 bg-black text-white">
+				<div className="flex grow items-center justify-center bg-black p-5 pt-0 text-white lg:p-1 lg:pt-5">
 					<div className="flex w-full items-center justify-start p-12">
 						<div className="flex flex-col gap-5">
 							<Dove className="w-10 fill-white" />
