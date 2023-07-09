@@ -7,7 +7,7 @@ export default function NavItem({ href, text, icon, index, disabled }) {
 	if (disabled) {
 		return (
 			<div
-				className={`duration-350 flex cursor-not-allowed items-center justify-center  rounded-full p-4 text-white transition ease-in-out xl:justify-start`}
+				className={`duration-350 flex cursor-not-allowed items-center justify-center rounded-full p-3 text-white transition ease-in-out xl:justify-start`}
 			>
 				{icon}
 				<span className="text-md ml-4 hidden xl:block">{text}</span>
@@ -17,7 +17,7 @@ export default function NavItem({ href, text, icon, index, disabled }) {
 	return (
 		<Link
 			href={href}
-			className={`duration-350 flex items-center justify-center rounded-full p-4 text-white xl:hover:bg-gray-500/30 ${
+			className={`duration-350 flex inline-flex items-center justify-center rounded-full p-3 text-white xl:hover:bg-gray-500/30 ${
 				href === router.asPath ? 'font-bold' : ''
 			} transition ease-in-out xl:justify-start`}
 		>

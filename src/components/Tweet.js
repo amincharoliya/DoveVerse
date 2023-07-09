@@ -23,7 +23,7 @@ const Tweet = () => {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					content: tweet,
+					body: tweet,
 					userEmail: session.user.email,
 				}),
 			});
@@ -42,7 +42,7 @@ const Tweet = () => {
 			{feed.map((tweet) => (
 				<p key={tweet.id}>
 					<span>{tweet.user.name}</span>
-					<span>{tweet.content}</span>
+					<span>{tweet.body}</span>
 				</p>
 			))}
 			<textarea

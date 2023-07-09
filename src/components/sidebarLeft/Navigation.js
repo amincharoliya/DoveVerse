@@ -7,7 +7,9 @@ export default function Navigation() {
 		<nav role="Main Navigation" className="mb-5">
 			<ul>
 				{NavItems.map((Item, index) => (
-					<NavItem {...Item} key={index} />
+					<li key={index}>
+						<NavItem {...Item} />
+					</li>
 				))}
 			</ul>
 		</nav>
