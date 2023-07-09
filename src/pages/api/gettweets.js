@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 	const tweets = await prisma.tweet.findMany({
 		select: {
 			id: true,
-			content: true,
+			body: true,
 			user: {
 				select: {
 					name: true,
