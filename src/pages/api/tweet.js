@@ -4,8 +4,8 @@ export default async function handler(req, res) {
 	const prisma = new PrismaClient();
 	if (req.method === 'POST') {
 		//Post a new tweet
-		const { content, userEmail } = req.body;
-		if (content === '') {
+		const { body, userEmail } = req.body;
+		if (body === '') {
 			res.status(403).json({
 				err: 'Error occurred while adding a new tweet. Please make sure to add content',
 			});
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 			try {
 				const tweets = await prisma.tweet.create({
 					data: {
-						content: content,
+						body: body,
 						user: { connect: { email: userEmail } },
 					},
 				});
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 				const tweet = await prisma.tweet.findMany({
 					select: {
 						id: true,
-						content: true,
+						body: true,
 						user: {
 							select: {
 								name: true,
